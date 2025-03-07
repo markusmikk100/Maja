@@ -1,44 +1,81 @@
 <!DOCTYPE html>
-<!-- saved from url=(0077)https://tallinna-polutehnikum.github.io/htmlcssuxui/ylesanded/pildid-3-1.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pildid 3: SVG maja</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./Pildid 3_ SVG maja_files/css2" rel="stylesheet">
-  <link rel="stylesheet" href="./Pildid 3_ SVG maja_files/styles.css">
-<script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension" src="chrome-extension://ncibgoaomkmdpilpocfeponihegamlic/token-signing-page-script.js"></script></head>
+  <style>
 
-<body>
-  <br>
+    body {
+      background-image: linear-gradient(to bottom, #a4ebff, #85e0fa, #93e3fb, #d2f5ff, #aeeafc);
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+
+    .raam {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Optional: Centers vertically on the full viewport height */
+    }
+    
+    .rotate-image {
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+  </style>
+</head>
+
+<body>  
   <div class="raam">
-    <svg width="800px" height="800px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- 
-     <!-- Korsten -->
-     <rect style="fill: #6a6a91;" x="370" y="340" height="45" width="15"></rect>
+    <svg width="1300px" height="1300px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- Light -->
+      <g transform="translate(160, 225)">
+        <image width="600" height="600" xlink:href="Light.png">
+          <animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="20s" repeatCount="indefinite" />
+        </image>
+      </g>
+
+      <!-- Other elements -->
+      <!-- Korsten -->
+      <rect style="fill: #6a6a91;" x="385" y="270" height="45" width="15"></rect>
 
       <!-- katus -->
-      <polyline style="fill: #484855;" points="360,400 400,330 440,400"></polyline>
+      <polyline style="fill: #484855;" points="375,330 415,260 455,330"></polyline>
 
       <!-- sein -->
-      <rect style="fill: #a61600;" x="365" y="400" height="50" width="70"></rect>
+      <rect style="fill: #a61600;" x="380" y="330" height="50" width="70"></rect>
 
       <!-- uks -->
-      <rect style="stroke-width: 2px; stroke:White; fill: #6a6a91;" x="400" y="410" height="42" width="27"></rect>
+      <rect style="stroke-width: 2px; stroke:White; fill: #6a6a91;" x="415" y="340" height="42" width="27"></rect>
 
       <!-- aken -->
-      <rect style="stroke-width: 2px; stroke:White; fill: #352d41;" x="373" y="410" height="23" width="20"></rect>
+      <rect style="stroke-width: 2px; stroke:White; fill: #352d41;" x="388" y="340" height="23" width="20"></rect>
 
       <!-- uksenupp -->
-      <circle style="fill: #2b2b33;" cx="422" cy="433" r="2.5"></circle>
-          
+      <circle style="fill: #2b2b33;" cx="437" cy="363" r="2.5"></circle>
 
+      <!-- Pilt maja all -->
+      <image x="160" y="225" width="500" height="500" xlink:href="Cloud.png"></image>
 
-
-
-
-    </svg>
+      <!-- GOOODDDD -->
+      <image x="300" y="100" width="300" height="300" xlink:href="God.png">
+        <animateMotion
+        path="M200,200 q60,50 200,0 q60,-50 300,0 q-60,-50 200,0 q-60,50 0,0 q-60,-50 -200,0 q-60,50 -300,0 q60,50 -20,200"
+        begin="0s" dur="40s" repeatCount="indefinite"
+        rotate="auto"
+        />
+      </image>
+    </svg>    
   </div>
-
-
-</body></html>
+</body>
+</html>
